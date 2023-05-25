@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.processorconferencia;
+package com.jmoordbcore.processoromega;
 
 import com.google.auto.service.AutoService;
 import javax.annotation.processing.*;
@@ -18,7 +18,7 @@ import static javax.lang.model.element.ElementKind.FIELD;
 
 @AutoService(Processor.class)
 @SupportedSourceVersion(SourceVersion.RELEASE_17)
-@SupportedAnnotationTypes("com.mycompany.processorconferencia.Builder")
+@SupportedAnnotationTypes("com.jmoordb.core.annotation.Builder")
 public class BuilderProcessor extends AbstractProcessor {
 
     @Override
