@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.jmoordbcore.processoromega;
+package com.jmoordb.core.processor;
 
 import com.google.auto.service.AutoService;
 import javax.annotation.processing.*;
@@ -18,8 +18,8 @@ import static javax.lang.model.element.ElementKind.FIELD;
 
 @AutoService(Processor.class)
 @SupportedSourceVersion(SourceVersion.RELEASE_17)
-@SupportedAnnotationTypes("com.jmoordb.core.annotation.Builder")
-public class BuilderProcessor extends AbstractProcessor {
+@SupportedAnnotationTypes("com.jmoordb.core.annotation.Repository")
+public class RepositoryProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
@@ -34,7 +34,7 @@ public class BuilderProcessor extends AbstractProcessor {
         String className = element.getSimpleName().toString();
         String packageName = element.getEnclosingElement().toString();
 
-        String builderName = className + "Builder";
+        String builderName = className + "Repository";
         String builderFullName = packageName + "." + builderName;
         List<? extends Element> fields = element.getEnclosedElements()
                 .stream().filter(e -> FIELD.equals(e.getKind())).toList();

@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <version.jmoordb-core-annotations>0.6</version.jmoordb-core-annotations>
+        <version.jmoordb-core-annotations>0.7</version.jmoordb-core-annotations>
         <jmoordb-core-processor-omega-toolkits.version>0.1</jmoordb-core-processor-omega-toolkits.version>
     </properties>
     <developers>
